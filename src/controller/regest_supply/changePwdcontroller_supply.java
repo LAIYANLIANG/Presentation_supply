@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,7 +26,7 @@ public class changePwdcontroller_supply {
 	@RequestMapping(path = "/changePwdAction_controller", method = RequestMethod.POST)
 	private String processAction(
 			HttpServletRequest request, 
-			@RequestParam(name="changePwd_org") String changePwd_org,
+			@RequestParam(name="changePwd_org") String changePwd_org,  // GIT TEST
 			@RequestParam(name = "changePwd") String changpwd, 
 			Model m) {
 		HttpSession session = request.getSession();
